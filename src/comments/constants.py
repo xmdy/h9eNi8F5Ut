@@ -1,0 +1,7 @@
+OBJECT_TYPE_COMMENT = 'comment'
+OBJECT_TYPE_POST = 'post'
+OBJECT_TYPE_USER = 'user'
+
+OBJECT_TYPES = {
+
+}
