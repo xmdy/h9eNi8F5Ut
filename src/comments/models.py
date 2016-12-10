@@ -20,9 +20,9 @@ class Comment(models.Model):
 
     path = LTreeField(verbose_name=u'comment path')
 
-    def t(self):
-        self.save(update_fields=[])
-        pass
+    @property
+    def level(self):
+        return self.path.count('.')
 
     class Meta:
         verbose_name = u'comment'

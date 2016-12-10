@@ -20,6 +20,8 @@ class CommentSerializer(serializers.Serializer):
 
     comment = serializers.CharField()
 
+    level = serializers.IntegerField()
+
     def create(self, validated_data):
         object_type = validated_data['object_type'].lower()
         object_id = validated_data['object_id']
