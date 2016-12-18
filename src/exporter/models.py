@@ -22,6 +22,10 @@ class ModelExport(models.Model):
 
     status = models.CharField(verbose_name=u'export status', choices=STATUS_CHOICES, default='new', max_length=16)
 
+    def set_status(self, status):
+        self.status = status
+        self.save()
+
     class Meta:
         verbose_name = u'model export'
         verbose_name_plural = u'model export'

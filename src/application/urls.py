@@ -17,11 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 
-from comments import views
 from comments.views.comment import CommentViewSet
+from exporter.views import ExportViewSet
 
 router = routers.DefaultRouter()
 router.register(r'comments', CommentViewSet)
+router.register(r'exports', ExportViewSet)
 
 
 urlpatterns = [

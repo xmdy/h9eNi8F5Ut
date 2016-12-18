@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'common',
     'comments',
     'exporter',
-    'djcelery',
 ]
 
 MIDDLEWARE = [
@@ -128,5 +127,6 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100
 }
 
-import djcelery
-djcelery.setup_loader()
+CELERY_BROKER_URL = 'redis://localhost'
+CELERY_ALWAYS_EAGER = True
+CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
